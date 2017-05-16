@@ -7,3 +7,7 @@ if(CommandsUsed >= 0)
     File.writeLine(path, $"{CommandsUsed1}");
     CommandsUsed = 0;
 }
+else
+{
+    return;
+}
