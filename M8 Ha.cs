@@ -4,5 +4,5 @@ command.CreateCommand("rollDice")
         .Parameter("Max")
         .Do(async e =>
         {
-            await e.Channel.SendMessage($"[{random.Next(int.Parse(e.Args[0]), int.Parse(e.Args[1]) + 1)}]);
+            await e.Channel.SendMessage($"[{random.Next(int.Parse(e.Args[0]), int.Parse(e.Args[1]) + 1)}]");
         });
