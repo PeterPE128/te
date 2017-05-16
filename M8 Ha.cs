@@ -5,7 +5,18 @@ command.CreateCommand("rollDice")
         .Parameter("Max")
         .Do(async e =>
         {
-            await e.Channel.SendMessage($"[{random.Next(int.Parse(e.Args[0]), int.Parse(e.Args[1]) + 1)}]");
+            if(e.Args[0] == "")
+            {
+                await e.Channel.SendMessage("You need a minimum number");
+            }
+            if(e.Args[1] == "")
+            {
+                await e.Channel.SendMessage("You need a maximun number");
+            }
+            else
+            {
+                await e.Channel.SendMessage($"[{random.Next(int.Parse(e.Args[0]), int.Parse(e.Args[1]) + 1)}]");
+            }
         });
 //hangman
 private ModuleManager _manager;
