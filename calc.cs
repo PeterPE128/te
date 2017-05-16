@@ -1,5 +1,5 @@
 command.CreateCommand("reken")
-    .parameter("ags")
+    .parameter("args")
     .Do(async (e) =>
     {
     if(args[0] == "")
