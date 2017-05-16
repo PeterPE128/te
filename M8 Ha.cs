@@ -49,6 +49,23 @@ manager.CreateCommands("hangman", group =>
                                                 else await e.Channel.SendMessage("No session of hangman running, sorry!");
                                             });
                        });
-//
+//random cat pics
+using (var client = new WebClient())
+{
+        await e.Channel.SendMessage("Finding random cat image...");
+        try
+        {
+                client.DownloadFile("http://thecatapi.com/api/images/get?format=src&type=png", @".\cat.png");
+                await e.Channel.SendFile(@".\cat.png");
+                if (File.Exists(@".\cat.png"))
+                {
+                        File.Delete(@".\cat.png");
+                }
+        }
+        catch (Exception ex)
+        {
+                await e.Channel.SendMessage("An error occured :(");
+        }
+}
 //
 //
