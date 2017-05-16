@@ -5,4 +5,5 @@ if(CommandsUsed >= 0)
     var CommandsUsed1 = File.readLines(path, line);
     CommandsUsed1++
     File.writeLine(path, $"{CommandsUsed1}");
+    CommandsUsed = 0;
 }
