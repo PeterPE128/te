@@ -2,21 +2,27 @@ command.CreateCommand("reken")
     .parameter("args")
     .Do(async (e) =>
     {
-    if(e.args[0] == "")
+        var args = e.args;
+    if(args[0] == "")
     {
         await e.Channel.SendMessage("You need number");
     }
-    if(e.args[1] == "")
+    if(args[1] == "")
     {
         await e.Channel.SendMessage("You need a seperator");
     }
-    if(e.args[2] == "")
+    if(args[2] == "")
     {
         await e.Channel.SendMessage("You need a second number");
     }
-    if(e.args[1] == "+")
+    if(args[1] == "+")
     {
-        var ant = e.args[0] ++ e.args[2];
+        var ant = args[0] ++ args[2];
         await e.Channel.SendMessage($"Your awnser is {ant}"
+    }
+    if(args[1] == "-")
+    {
+        var ant = args[0] -- args[2];
+        await e.Channel.SendMessage($"You awnser is {ant}")
     }
     });
