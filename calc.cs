@@ -17,12 +17,12 @@ command.CreateCommand("reken")
     }
     if(args[1] == "+")
     {
-        var ant = args[0] ++ args[2];
+        var ant = int.Parse(args[0]) ++ int.Parse(args[2]);
         await e.Channel.SendMessage($"Your awnser is {ant}"
     }
     if(args[1] == "-")
     {
-        var ant = args[0] -- args[2];
+        var ant = int.Parse(args[0]) -- int.parse(args[2]);
         await e.Channel.SendMessage($"You awnser is {ant}")
     }
     });
