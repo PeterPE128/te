@@ -12,7 +12,7 @@ commands.CreateCommand("close")
         
         await e.Channel.SendMessage("The bot has been stoped");
         Console.ForegroundColor = ConsoleColor.blue;        Console.Write("D");
-        Console.ForegroundColor = ConsoleColor.Yello;        Console.Write("i");
+        Console.ForegroundColor = ConsoleColor.Yellow;        Console.Write("i");
         Console.ForegroundColor = ConsoleColor.Green;        Console.Write("s");
         Console.ForegroundColor = ConsoleColor.Red;        Console.Write("c");
         Console.ForegroundColor = ConsoleColor.Cyan;        Console.Write("o");
