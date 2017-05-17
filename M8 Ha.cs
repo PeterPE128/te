@@ -111,14 +111,15 @@ public async Task TrackMembers()
 //ServerCount
 public async Task CheckGuilds([Remainder] string discard = "")
 {
-        var guilds = _cl.Guilds.Count;
+        var guilds = discord.Guilds.Count;
+        File.Write("servercount.dat", guilds);
         var rguilds = File.ReadAllText("servercount.dat");
         var embed = new EmbedBuilder()
                 .WithColor(new Color(0, 0, 255))
                 .WithTitle("Recorded Servers")
                 .AddInlineField("Server Count", guilds.ToString())
                 .AddInlineField("Servers Recorded", rguilds);
-        await ReplyAsync("", false, embed);
+        await e.Channel.SendMessage("", false, embed);
 }
 //
 //
