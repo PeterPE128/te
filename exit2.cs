@@ -10,8 +10,19 @@ commands.CreateCommand("close")
       if(Consol.ReadLine() == "Yes")
       {
         await e.Channel.SendMessage("The bot has been stoped");
-        Console.WriteLine("The Bot has been Disconected");
-        discord.Disconect();
+        Console.ForeGroundColor = ConsoleColor.blue;        Console.Write("D");
+        Console.ForeGroundColor = ConsoleColor.Yello;        Console.Write("i");
+        Console.ForeGroundColor = ConsoleColor.Green;        Console.Write("s");
+        Console.ForeGroundColor = ConsoleColor.Red;        Console.Write("c");
+        Console.ForeGroundColor = ConsoleColor.Cyan;        Console.Write("o");
+        Console.ForeGroundColor = ConsoleColor.White;        Console.Write("n");
+        Console.ForeGroundColor = ConsoleColor.DarkBlue;        Console.Write("e");
+        Console.ForeGroundColor = ConsoleColor.Magenta;        Console.Write("c");
+        Console.ForeGroundColor = ConsoleColor.DarkGreen;        Console.Write("t");
+        Console.ForeGroundColor = ConsoleColor.Orang;        Console.Write("e");
+        Console.ForeGroundColor = ConsoleColor.DarkCyan;        Console.Write("d");
+        
+        await discord.Disconect();
       }
     }
   });
