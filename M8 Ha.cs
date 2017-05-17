@@ -96,4 +96,23 @@ public async Task Track()
                 Repeat();
         }
 }
+//memberCount
+public async Task TrackMembers()
+{
+        discord.UserJoined += recordusers;
+        discord.UserLeft += recordusers;
+        async Task recordusers(object var1)
+        {
+                var guild = Context.Guild as SocketGuild;
+                var online = guild.Users.Where(x => x.Status == UserStatus.Online || x.Status == UserStatus.Idle || x.Status == UserStatus.DoNotDisturb || x.Status == UserStatus.AFK);
+                File.AppendAllText("Memberslist.csv", $"{DateTime.Now},{guild.MemberCount},{online.Count()}" + Environment.NewLine);
+        }
+}
+//
+//
+//
+//
+//
+//
+//
 //
