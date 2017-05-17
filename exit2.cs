@@ -9,19 +9,20 @@ commands.CreateCommand("close")
       Consol.WriteLine("Yes or No");
       if(Consol.ReadLine() == "Yes")
       {
-        await e.Channel.SendMessage("The bot has been stoped");
-        Console.ForeGroundColor = ConsoleColor.blue;        Console.Write("D");
-        Console.ForeGroundColor = ConsoleColor.Yello;        Console.Write("i");
-        Console.ForeGroundColor = ConsoleColor.Green;        Console.Write("s");
-        Console.ForeGroundColor = ConsoleColor.Red;        Console.Write("c");
-        Console.ForeGroundColor = ConsoleColor.Cyan;        Console.Write("o");
-        Console.ForeGroundColor = ConsoleColor.White;        Console.Write("n");
-        Console.ForeGroundColor = ConsoleColor.DarkBlue;        Console.Write("e");
-        Console.ForeGroundColor = ConsoleColor.Magenta;        Console.Write("c");
-        Console.ForeGroundColor = ConsoleColor.DarkGreen;        Console.Write("t");
-        Console.ForeGroundColor = ConsoleColor.Orang;        Console.Write("e");
-        Console.ForeGroundColor = ConsoleColor.DarkCyan;        Console.Write("d");
         
+        await e.Channel.SendMessage("The bot has been stoped");
+        Console.ForegroundColor = ConsoleColor.blue;        Console.Write("D");
+        Console.ForegroundColor = ConsoleColor.Yello;        Console.Write("i");
+        Console.ForegroundColor = ConsoleColor.Green;        Console.Write("s");
+        Console.ForegroundColor = ConsoleColor.Red;        Console.Write("c");
+        Console.ForegroundColor = ConsoleColor.Cyan;        Console.Write("o");
+        Console.ForegroundColor = ConsoleColor.White;        Console.Write("n");
+        Console.ForegroundColor = ConsoleColor.DarkBlue;        Console.Write("e");
+        Console.ForegroundColor = ConsoleColor.Magenta;        Console.Write("c");
+        Console.ForegroundColor = ConsoleColor.DarkGreen;        Console.Write("t");
+        Console.ForegroundColor = ConsoleColor.Orang;        Console.Write("e");
+        Console.ForegroundColor = ConsoleColor.DarkCyan;        Console.Write("d");
+        Task.Delay(5000);
         await discord.Disconect();
       }
     }
