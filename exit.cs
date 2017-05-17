@@ -10,8 +10,8 @@ commands.CreateCommand("close")
         if(Consol.ReadLine() == "Yes")
         {
             await e.Channel.SendMessage("The bot has been stoped");
-            discord.Disconect();
             Console.WriteLine("The Bot has been Disconected");
+            discord.Disconect();
         }
      }
   
