@@ -78,5 +78,22 @@ using (var client = new WebClient())
                 await e.Channel.SendMessage("An error occured :(");
         }
 }
-//
+//UserCountLog
+public async Task Track()
+{
+        
+        var file = File.ReadAllLines(".\UserLog.txt");
+        var userlist = "";
+        Repeat();
+        async void Repeat()
+        {
+                await Task.Delay(1000 * 60).ContinueWith(async x =>
+                        {
+                                var users = await Context.Guild.GetUsersAsync();
+                                userlist += $"{ users.Count.ToString()}, ";
+                                File.WriteAllText("UserLog.txt", userlist);
+                        });
+                Repeat();
+        }
+}
 //
