@@ -1,6 +1,6 @@
 if(CommandsUsed >= 0)
 {
-    var path = @"memes\lol.txt";
+    var path = @"memes\CommandsUsed.txt";
     var line = "1";//haha
     var CommandsUsed1 = File.readLines(path, line);
     CommandsUsed1++
