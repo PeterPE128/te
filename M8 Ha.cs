@@ -108,7 +108,18 @@ public async Task TrackMembers()
                 File.AppendAllText("Memberslist.csv", $"{DateTime.Now},{guild.MemberCount},{online.Count()}" + Environment.NewLine);
         }
 }
-//
+//ServerCount
+public async Task CheckGuilds([Remainder] string discard = "")
+{
+        var guilds = _cl.Guilds.Count;
+        var rguilds = File.ReadAllText("servercount.dat");
+        var embed = new EmbedBuilder()
+                .WithColor(new Color(0, 0, 255))
+                .WithTitle("Recorded Servers")
+                .AddInlineField("Server Count", guilds.ToString())
+                .AddInlineField("Servers Recorded", rguilds);
+        await ReplyAsync("", false, embed);
+}
 //
 //
 //
